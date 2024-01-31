@@ -8,7 +8,8 @@ import subprocess
 # def lightHouse():
 #     os.system(f'npx lighthouse-batch -f LT_url.txt --html -p "--locale zh --preset=desktop"')
 def lightHouse():
-    os.system(f'npx lighthouse-batch -f LT_url.txt --html')
+    command = f'npx lighthouse-batch -f LT_url.txt --html'
+    subprocess.run(command, shell=True, check=True)
 
 def check_all():
     report = getInfo().read_summary()
