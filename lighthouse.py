@@ -3,9 +3,12 @@ from base_Def import getInfo,switch,score_search,num_search,practices_search,pro
 import jmespath
 from send_Msg import send_success_msg,send_fail_msg
 from get_Link import catch_LT_Allproduct
+import subprocess
 
+# def lightHouse():
+#     os.system(f'npx lighthouse-batch -f LT_url.txt --html -p "--locale zh --preset=desktop"')
 def lightHouse():
-    os.system(f'npx lighthouse-batch -f LT_url.txt --html -p "--locale zh --preset=desktop"')
+    os.system(f'npx lighthouse-batch -f LT_url.txt --html')
 
 def check_all():
     report = getInfo().read_summary()
@@ -109,8 +112,8 @@ def check_all():
                 send_fail_msg(name, url)
 
 if __name__ == '__main__':
-    getInfo().clear_lighthouse_LTurl()
-    getInfo().write_baseUrl()
-    catch_LT_Allproduct()
+    # getInfo().clear_lighthouse_LTurl()
+    # getInfo().write_baseUrl()
+    # catch_LT_Allproduct()
     lightHouse()
-    check_all()
+    # check_all()
