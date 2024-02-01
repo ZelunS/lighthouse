@@ -125,7 +125,7 @@ def send_fail_msg(name,key):
             "header": {
                 "template": "red",
                 "title": {
-                    "content": "网站健康巡检",
+                    "content": "网站健康巡检",+
                     "tag": "plain_text"
                 }
             }
